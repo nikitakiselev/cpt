@@ -1,0 +1,288 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  border: 0;
+  font-family: 'Houschka Pro';
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-BoldItalic.eot');
+  src: url('../fonts/HouschkaPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-BoldItalic.woff') format('woff'), url('../fonts/HouschkaPro-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-ThinItalic.eot');
+  src: url('../fonts/HouschkaPro-ThinItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-ThinItalic.woff') format('woff'), url('../fonts/HouschkaPro-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-DemiBold.eot');
+  src: url('../fonts/HouschkaPro-DemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-DemiBold.woff') format('woff'), url('../fonts/HouschkaPro-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-Medium.eot');
+  src: url('../fonts/HouschkaPro-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-Medium.woff') format('woff'), url('../fonts/HouschkaPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-ExtraBoldItalic.eot');
+  src: url('../fonts/HouschkaPro-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-ExtraBoldItalic.woff') format('woff'), url('../fonts/HouschkaPro-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-Bold.eot');
+  src: url('../fonts/HouschkaPro-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-Bold.woff') format('woff'), url('../fonts/HouschkaPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-Light.eot');
+  src: url('../fonts/HouschkaPro-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-Light.woff') format('woff'), url('../fonts/HouschkaPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-ExtraBold.eot');
+  src: url('../fonts/HouschkaPro-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-ExtraBold.woff') format('woff'), url('../fonts/HouschkaPro-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-Thin.eot');
+  src: url('../fonts/HouschkaPro-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-Thin.woff') format('woff'), url('../fonts/HouschkaPro-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-DemiBoldItalic.eot');
+  src: url('../fonts/HouschkaPro-DemiBoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-DemiBoldItalic.woff') format('woff'), url('../fonts/HouschkaPro-DemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-MediumItalic.eot');
+  src: url('../fonts/HouschkaPro-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-MediumItalic.woff') format('woff'), url('../fonts/HouschkaPro-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Houschka Pro';
+  src: url('../fonts/HouschkaPro-LightItalic.eot');
+  src: url('../fonts/HouschkaPro-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/HouschkaPro-LightItalic.woff') format('woff'), url('../fonts/HouschkaPro-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+.icon-phone {
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/icons/phone.png") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.container {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+.page-header {
+  background: #e03635;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 10px;
+  position: relative;
+  height: 78px;
+  color: white;
+}
+.page-header a {
+  color: white;
+  text-decoration: none;
+}
+.page-header .site-name {
+  display: inline-block;
+  font-size: 19px;
+  text-transform: uppercase;
+  background: #e93f3e;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 18px;
+  font-weight: 800;
+}
+.page-header .phones {
+  position: absolute;
+  left: 740px;
+  top: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3em;
+}
+.page-header .phones .phone a,
+.page-header .phones .phone .icon-phone {
+  vertical-align: middle;
+}
+.page-header .phones .phone .hg {
+  font-weight: 800;
+}
+.page-header .phones .order {
+  display: inline-block;
+  background: #cd2625;
+  border-radius: 5px;
+  text-transform: lowercase;
+  font-size: 16px;
+  padding: 0 28px;
+  font-weight: 300;
+}
+.experience {
+  position: absolute;
+  background: url("../images/experience.png") no-repeat;
+  width: 119px;
+  height: 62px;
+  top: 4px;
+  left: 400px;
+}
+.quality {
+  position: absolute;
+  background: url("../images/quality.png") no-repeat;
+  width: 150px;
+  height: 160px;
+  top: 0px;
+  left: 570px;
+}
+
+/*# sourceMappingURL=maps/app.css.map */
