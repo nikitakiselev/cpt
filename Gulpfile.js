@@ -9,9 +9,9 @@ var rigger = require('gulp-rigger');
 var livereload = require('gulp-livereload');
 
 gulp.task('watch', ['build'], function () {
-    livereload.listen({
-        host: 'http://cpt.dev'
-    });
+    // livereload.listen({
+    //     host: 'http://cpt.dev'
+    // });
 
     watch(['./less/**/*.less', './html/**/*.html'], function() {
         gulp.run('build');
@@ -25,15 +25,15 @@ gulp.task('less', function () {
             plugins: [autoprefix]
         }))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('./dist/css'))
-        .pipe(livereload());
+        .pipe(gulp.dest('./dist/css'));
+        //.pipe(livereload());
 });
 
 gulp.task('html', function() {
     gulp.src('./html/*.html')
         .pipe(rigger())
-        .pipe(gulp.dest('./dist'))
-        .pipe(livereload());
+        .pipe(gulp.dest('./dist'));
+        //.pipe(livereload());
 });
 
 gulp.task('build', function () {

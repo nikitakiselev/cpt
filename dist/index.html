@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Document title</title>
+    <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css">
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="bower_components/lightbox2/dist/css/lightbox.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
@@ -32,9 +35,399 @@
     
         </header>
     </div>
+    <div class="row-1">
+        <div class="container">
+            <div class="working-time">Режим работы без перерывов <br> и выходных с 8:00 до 20:00</div>
+    
+            <div class="grid">
+                <div class="grid-left">
+                    <div class="tab-container">
+                        <ul class='etabs'>
+                            <li class='tab'><a href="#kitchen">Кухня</a></li>
+                            <li class='tab'><a href="#bedroom">Спальня</a></li>
+                            <li class='tab'><a href="#living-room">Гостинная</a></li>
+                        </ul>
+    
+                        <div id="kitchen" class="tab-content">
+                            <h2 class="tab-header">Натяжной потолок <span class="hg">на кухню</span><br> под ключ</h2>
+    
+                            <div class="grid">
+                                <div class="left">
+                                    <div class="block-1">
+                                        Площадь: <br>
+                                        <span class="hg">9</span> м<span class="sup">2</span>
+                                    </div>
+                                    <div class="block-2">Под ключ</div>
+                                    <div class="block-3">
+                                        <div class="price">
+                                            Цена: <br>
+                                            <span class="hg">3486</span> м<span class="sup">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="right">
+                                    <header>Смета</header>
+    
+                                    <ul>
+                                        <li>Площадь помещения 9 м2 — <strong>2250 руб</strong></li>
+                                        <li>Дополнительные углы  - 0 штук — <strong>0 руб</strong></li>
+                                        <li>Профиль по периметру 12 м — <strong>936 руб</strong></li>
+                                        <li>Установка люстры на крюк 1 шт - <a href="#" class="hg">подарок</a></li>
+                                        <li>Окантовка стояка отопления 1 шт - <strong>300 руб</strong></li>
+                                    </ul>
+    
+                                    <img src="images/img-1.jpg" alt=""/>
+                                </div>
+                            </div>
+    
+                            <div class="text-center">
+                                <a href="#" class="btn btn-red">Заказать по акции</a>
+                            </div>
+    
+                            <div class="counter-wrapper">
+                                <div class="counter-header">Внимание! До конца акции осталось:</div>
+                                <div id="kitchen-counter" class="counter"></div>
+                            </div>
+                        </div>
+                        <div id="bedroom" class="tab-content">
+                            <h2 class="tab-header">Натяжной потолок <span class="hg">в спальню</span><br> под ключ</h2>
+    
+                            <div class="grid">
+                                <div class="left">
+                                    <div class="block-1">
+                                        Площадь: <br>
+                                        <span class="hg">9</span> м<span class="sup">2</span>
+                                    </div>
+                                    <div class="block-2">Под ключ</div>
+                                    <div class="block-3">
+                                        <div class="price">
+                                            Цена: <br>
+                                            <span class="hg">3486</span> м<span class="sup">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="right">
+                                    <header>Смета</header>
+    
+                                    <ul>
+                                        <li>Площадь помещения 9 м2 — <strong>2250 руб</strong></li>
+                                        <li>Дополнительные углы  - 0 штук — <strong>0 руб</strong></li>
+                                        <li>Профиль по периметру 12 м — <strong>936 руб</strong></li>
+                                        <li>Установка люстры на крюк 1 шт - <a href="#" class="hg">подарок</a></li>
+                                        <li>Окантовка стояка отопления 1 шт - <strong>300 руб</strong></li>
+                                    </ul>
+    
+                                    <img src="images/img-1.jpg" alt=""/>
+                                </div>
+                            </div>
+    
+                            <div class="text-center">
+                                <a href="#" class="btn btn-red">Заказать по акции</a>
+                            </div>
+    
+                            <div class="counter-wrapper">
+                                <div class="counter-header">Внимание! До конца акции осталось:</div>
+                                <div id="bedroom-counter" class="counter"></div>
+                            </div>
+                        </div>
+                        <div id="living-room" class="tab-content">
+                            <h2 class="tab-header">Натяжной потолок <span class="hg">в гостинную</span><br> под ключ</h2>
+    
+                            <div class="grid">
+                                <div class="left">
+                                    <div class="block-1">
+                                        Площадь: <br>
+                                        <span class="hg">9</span> м<span class="sup">2</span>
+                                    </div>
+                                    <div class="block-2">Под ключ</div>
+                                    <div class="block-3">
+                                        <div class="price">
+                                            Цена: <br>
+                                            <span class="hg">3486</span> м<span class="sup">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="right">
+                                    <header>Смета</header>
+    
+                                    <ul>
+                                        <li>Площадь помещения 9 м2 — <strong>2250 руб</strong></li>
+                                        <li>Дополнительные углы  - 0 штук — <strong>0 руб</strong></li>
+                                        <li>Профиль по периметру 12 м — <strong>936 руб</strong></li>
+                                        <li>Установка люстры на крюк 1 шт - <a href="#" class="hg">подарок</a></li>
+                                        <li>Окантовка стояка отопления 1 шт - <strong>300 руб</strong></li>
+                                    </ul>
+    
+                                    <img src="images/img-1.jpg" alt=""/>
+                                </div>
+                            </div>
+    
+                            <div class="text-center">
+                                <a href="#" class="btn btn-red">Заказать по акции</a>
+                            </div>
+    
+                            <div class="counter-wrapper">
+                                <div class="counter-header">Внимание! До конца акции осталось:</div>
+                                <div id="living-room-counter" class="counter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="grid-right">
+                    <div class="cause-gager">
+                        <div class="lenta"></div>
+                        <div class="peoples"></div>
+                        <div class="info">Время приезда замерщика - <br> менее одного часа</div>
+    
+                        <div class="header">Вызвать <br> замерщика <br> <strong>бесплатно</strong></div>
+    
+                        <form action="form-handler.php" method="post" id="cause-gager-form">
+                            <input type="hidden" name="form_id" value="cause_gager">
+    
+                            <div class="form-group">
+                                <input type="text" name="name" value="" class="form-control" placeholder="Ваше имя"/>
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" name="phone" value="" class="form-control" placeholder="Ваш телефон"/>
+                            </div>
+    
+                            <div class="form-group">
+                                <button type="submit" class="submit">Вызвать замерщика!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-2">
+        <div class="container">
+    
+            <div class="items">
+                <div class="row-items">
+                    <div class="item">
+                        <div class="icon icon-clock"></div>
+                        <header>2 часа</header>
+                        <div class="text">Время выезда замерщика</div>
+                    </div>
+    
+                    <div class="item">
+                        <div class="icon icon-round"></div>
+                        <header>10 лет</header>
+                        <div class="text">Гарантия на потолки</div>
+                    </div>
+    
+                    <div class="item">
+                        <div class="icon icon-light"></div>
+                        <header>Профи</header>
+                        <div class="text">Все наши сотрудники</div>
+                    </div>
+                </div>
+    
+                <div class="row-items">
+                    <div class="item">
+                        <div class="icon icon-coins"></div>
+                        <header>Лучшие</header>
+                        <div class="text">Цены от производителя</div>
+                    </div>
+    
+                    <div class="item">
+                        <div class="icon icon-star"></div>
+                        <header>100%</header>
+                        <div class="text">Качество полотен</div>
+                    </div>
+    
+                    <div class="item">
+                        <div class="icon icon-gift"></div>
+                        <header>Подарок</header>
+                        <div class="text">Сервисное <br> обслуживание <br> на 1 год</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tab-container etabs-justified">
+                <ul class="etabs">
+                    <li class="tab"><a href="#reviews">Отзывы</a></li>
+                    <li class="tab"><a href="#prices">Наши цены</a></li>
+                    <li class="tab"><a href="#portfolio">Примеры работ</a></li>
+                    <li class="tab"><a href="#schema">Схема работы</a></li>
+                    <li class="tab"><a href="#certificates">Сертификаты</a></li>
+                </ul>
+    
+                <div id="reviews" class="tab-content">
+                    <div class="reviews">
+                        <div class="review-item">
+                            <div class="avatar">
+                                <img src="images/avatar.png" alt="">
+                            </div>
+                    
+                            <div class="body">
+                                <div class="user">Катрин (г. Аксай)</div>
+                                <div class="comment">Огромное спасибо команде Центра Потолочных Технологий за воплощение в реальность моих смелых идей с дизайном гостиной! Т.к. Все продумывала сама, очень нуждалась в помощи и советах специалистов. Сомнений и вопросов было очень много)))). Очень сомневалась, не будет ли слишком ярко смотреться мой красный потолок... Все получилось очень эффектно и красиво! К качеству работ претензий вообще нет! На отлично!!! От души, спасибо!!!!!!</div>
+                            </div>
+                        </div>
+                    
+                        <div class="review-item">
+                            <div class="avatar">
+                                <img src="images/avatar.png" alt="">
+                            </div>
+                    
+                            <div class="body">
+                                <div class="user">Семья Кришнитиных ( г. Ростов-на- Дону, ул. Батуринская, 165)</div>
+                                <div class="comment">Обратились в Центр Потолочных Технологий по рекомендации знакомых и не пожалели. Остались довольны. Все сделали в назначенный срок и за разумную цену. Спасибо всем! Удачи и процветания!</div>
+                            </div>
+                        </div>
+                    
+                        <div class="review-item">
+                            <div class="avatar">
+                                <img src="images/avatar.png" alt="">
+                            </div>
+                    
+                            <div class="body">
+                                <div class="user">Елена Степановна (г. Азов)</div>
+                                <div class="comment">Хочу поблагодарить Вас за качественную и в срок выполненную работу.  Работу оцениваю на 5+. Рекомендую всем! Желаю успехов и новых заказов!</div>
+                            </div>
+                        </div>
+                    
+                        <div class="review-item">
+                            <div class="avatar">
+                                <img src="images/avatar.png" alt="">
+                            </div>
+                    
+                            <div class="body">
+                                <div class="user">Кристина (Аксай, Садовая, 18а)</div>
+                                <div class="comment">Заказывала монтаж  потолков в ванную и на кухню. Оцениваю качество выполненных работ на отлично!!! Большое спасибо, и за обходительную и вежливую культуру обслуживания, и за ваш профессиональный подход. Буду обращаться к вам еще!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="prices" class="tab-content">
+                    <a href="http://lorempicsum.com/futurama/1280/800/3" data-lightbox="gallery-1" data-title="Описание изображения устанавливается с помощью аттрибута data-title прямо в ссылке">
+                        <img src="http://lorempicsum.com/futurama/400/250/3" alt="">
+                    </a>
+                </div>
+    
+                <div id="portfolio" class="tab-content">
+                    // portfolio
+                </div>
+    
+                <div id="schema" class="tab-content">
+                    // schema
+                </div>
+    
+                <div id="certificates" class="tab-content">
+                    // certificates
+                </div>
+            </div>
+    
+            <ul class="tabs-bottom-links">
+                <li><a href="#">Бесплатный звонок</a></li>
+                <li><a href="#">Расчёт стоимости</a></li>
+                <li><a href="#">Вызвать замерщика</a></li>
+            </ul>
+    
+    
+        </div>
+    </div>
+    <div class="container">
+        <div class="row-3">
+            <header class="row-3-header">
+                <span class="red">7 главных причин</span><span class="blue">, почему нас рекомендуют</span><br> знакомым и друзьям
+            </header>
+    
+            <div class="advantages">
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+    
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+    
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+    
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+    
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+    
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+    
+                <div class="advantage">
+                    <div class="img"></div>
+                    <div class="body">
+                        <header>100 % качество</header>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, distinctio vitae? Ad aliquid cum debitis quia vero?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-4">
+        <div class="container">
+            <header>Запишитесь прямо сечас, мы <br> перезвоним вам и обязательно <br>подребём лучшее решение для вас!</header>
+    
+            <form action="form-handler.php" method="post" id="record-form">
+                <input type="hidden" name="form_id" value="record">
+    
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                </div>
+    
+                <div class="form-group">
+                    <input type="text" name="phone" placeholder="Ваш телефон">
+                </div>
+    
+                <div class="form-group">
+                    <button type="submit">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/jQuery-EasyTabs/lib/jquery.easytabs.min.js"></script>
-<script src="scripts/app.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jQuery-EasyTabs/lib/jquery.easytabs.min.js"></script>
+    <script src="bower_components/flipclock/compiled/flipclock.min.js"></script>
+    <script src="bower_components/ajax-forms/AjaxForm.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="bower_components/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>

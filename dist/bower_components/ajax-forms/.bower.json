@@ -1,0 +1,14 @@
+{
+  "name": "ajax-forms",
+  "homepage": "https://github.com/digitalhammer/ajax-forms",
+  "_release": "040db2f87e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "040db2f87e4dc743691f26138d22bfcb756ab8df"
+  },
+  "_source": "git://github.com/digitalhammer/ajax-forms.git",
+  "_target": "*",
+  "_originalSource": "digitalhammer/ajax-forms",
+  "_direct": true
+}

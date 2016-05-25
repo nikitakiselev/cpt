@@ -1,0 +1,59 @@
+.btn {
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+
+    &.btn-red {
+        background: #e03635;
+        color: white;
+        padding: 4px 40px;
+        font-size: 24px;
+        text-transform: uppercase;
+        border-radius: 8px;
+    }
+
+}
+
+.form-group {
+    margin-bottom: 25px;
+
+    &.has-error {
+        .form-control {
+            box-shadow: 0 0 0 4px #e03635;
+        }
+    }
+
+    .help-block {
+        position: absolute;
+    }
+
+    .form-control {
+        width: 100%;
+        background: white;
+        border: none;
+        border-radius: 15px;
+        padding: 20px 0;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Houschka Pro';
+        position: relative;
+        .placeholder({
+            color: #1567b0;
+        });
+        font-size: 18px;
+    }
+}
+
+.submit {
+    border-radius: 0;
+    width: 100%;
+    background: #e03635;
+    color: white;
+    line-height: 1em;
+    padding: 12px 50px;
+    border: 5px solid white;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+}

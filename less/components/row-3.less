@@ -1,0 +1,47 @@
+.row-3 {
+    padding-top: 40px;
+}
+
+.row-3-header {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 75px;
+    position: relative;
+
+    .red {
+        color: #e03635;
+    }
+
+    .blue {
+        color: #1567b0;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 147px;
+        background: #e03635;
+        height: 5px;
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 420px;
+        background: #1567b0;
+        height: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -13px;
+
+    }
+}

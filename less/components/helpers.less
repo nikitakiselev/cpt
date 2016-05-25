@@ -1,0 +1,30 @@
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
