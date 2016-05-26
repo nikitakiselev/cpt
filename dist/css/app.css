@@ -127,7 +127,9 @@ a img {
 }
 .sup {
   font-size: 60%;
-  transform: translateY(-28%);
+  -webkit-transform: translateY(-28%);
+      -ms-transform: translateY(-28%);
+          transform: translateY(-28%);
   display: inline-block;
 }
 @font-face {
@@ -283,12 +285,14 @@ a img {
   text-align: center;
 }
 .etabs-justified .etabs {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .etabs-justified .tab {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 62px;
   z-index: 5;
 }
@@ -384,7 +388,9 @@ a img {
   background: #1567b0;
   bottom: -10px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .tab-container .tab-header:before {
   position: absolute;
@@ -394,7 +400,9 @@ a img {
   background: #1567b0;
   bottom: -12px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .tab-container .tab-header .hg {
   color: #e03635;
@@ -532,12 +540,15 @@ a img {
   font-size: 16px;
 }
 .advantages {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .advantages .advantage {
   width: 50%;
@@ -585,7 +596,9 @@ a img {
   left: 50%;
   min-height: 175px;
   width: 600px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .modal .modal-inner {
   position: relative;
@@ -862,10 +875,12 @@ a img {
   margin-bottom: 10px;
 }
 .row-2 .items .row-items {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   margin-bottom: 15px;
 }
 .row-2 .items .item {
@@ -927,7 +942,9 @@ a img {
   height: 5px;
   bottom: -14px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .row-3-header:before {
   position: absolute;
@@ -937,7 +954,9 @@ a img {
   background: #1567b0;
   height: 2px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: -13px;
 }
 .row-4 {
@@ -979,10 +998,12 @@ a img {
   padding-bottom: 52px;
 }
 .page-footer .blocks {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .page-footer .block {
   width: 225px;
@@ -1025,7 +1046,9 @@ a img {
   z-index: 10;
   width: 20px;
   height: 20px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .form-footer .form-control {
   border: 2px solid #e03938;

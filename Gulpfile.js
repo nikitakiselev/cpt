@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
+var autoprefix = new LessAutoprefix({ browsers: ['last 4 versions'] });
 var sourcemaps = require('gulp-sourcemaps');
 var watchLess = require('gulp-watch-less');
 var watch = require('gulp-watch');
