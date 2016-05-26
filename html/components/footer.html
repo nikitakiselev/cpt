@@ -1,0 +1,82 @@
+<footer class="page-footer">
+    <div class="container">
+
+        <div class="blocks">
+            <div class="block">
+                <header class="block-header">Контакты</header>
+                <div class="block-body">
+                    <p>
+                        <a href="tel:88632705837">8 (863) <strong>270-58-37</strong></a><br>
+                        <a href="tel:+79044408719">8 (904) <strong>440-87-19</a></strong>
+                    </p>
+
+                    <p>Адрес: ул. Пушкина, д 10</p>
+
+                    <p class="smaller text-right">Режим работы без перерывов и выходных с 8:00 до 20:00</p>
+                </div>
+            </div>
+
+            <div class="block">
+                <header class="block-header">Мы на карте</header>
+                <div class="block-body">
+                    <a href="maps.yandex.ru" target="_blank">
+                        <img src="images/map.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="block block-blue">
+                <header class="block-header">Запись на замер</header>
+                <div class="block-body">
+                    <form action="form-handler.php" method="post" id="record-form-footer" class="record-form-footer form-footer">
+                        <input type="hidden" name="form_id" value="record-footer">
+
+                        <div class="form-group">
+                            <input type="text" name="name" value="" class="form-control" placeholder="Ваше имя"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="phone" value="" class="form-control" placeholder="Ваш телефон"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="comment" placeholder="Комментарий" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="submit">Записаться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="block">
+                <header class="block-header">Задать вопрос</header>
+                <div class="block-body">
+                    <form action="form-handler.php" method="post" id="question-form" class="question-form form-footer">
+                        <input type="hidden" name="form_id" value="question">
+
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Ваше имя" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="phone" placeholder="Ваш телефон" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="comment" placeholder="Комментарий" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="submit">Задать вопрос</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</footer>

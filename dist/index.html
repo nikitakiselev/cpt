@@ -30,7 +30,13 @@
                     <a href="tel:+79044408719">8 (904) <span class="hg">440-87-19</span></a>
                 </div>
     
-                <a href="#call" class="order">заказать звонок</a>
+                <a href="#"
+                   data-modal
+                   data-title="Заголовок из ссылки"
+                   data-content="Контент из ссылки"
+                   data-form-name="Название формы"
+                   class="order"
+                >заказать звонок</a>
             </div>
     
         </header>
@@ -82,7 +88,10 @@
                             </div>
     
                             <div class="text-center">
-                                <a href="#" class="btn btn-red">Заказать по акции</a>
+                                <a href="#"
+                                   data-modal
+                                   data-title="Заказать по акции"
+                                   class="btn btn-red">Заказать по акции</a>
                             </div>
     
                             <div class="counter-wrapper">
@@ -327,9 +336,9 @@
             </div>
     
             <ul class="tabs-bottom-links">
-                <li><a href="#">Бесплатный звонок</a></li>
-                <li><a href="#">Расчёт стоимости</a></li>
-                <li><a href="#">Вызвать замерщика</a></li>
+                <li><a href="#" data-modal data-title="Бесплатный звонок" data-content="Бесплатный звонок" data-form-name="Бесплатный звонок">Бесплатный звонок</a></li>
+                <li><a href="#" data-modal data-title="Расчёт стоимости" data-content="Расчёт стоимости" data-form-name="Расчёт стоимости">Расчёт стоимости</a></li>
+                <li><a href="#" data-modal data-title="Вызвать замерщика" data-content="Вызвать замерщика" data-form-name="Вызвать замерщика">Вызвать замерщика</a></li>
             </ul>
     
     
@@ -404,21 +413,134 @@
         <div class="container">
             <header>Запишитесь прямо сечас, мы <br> перезвоним вам и обязательно <br>подребём лучшее решение для вас!</header>
     
-            <form action="form-handler.php" method="post" id="record-form">
+            <form action="form-handler.php" method="post" id="record-form" class="record-form">
                 <input type="hidden" name="form_id" value="record">
     
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Ваше имя">
+                    <input type="text" name="name" placeholder="Ваше имя" class="form-control">
                 </div>
     
                 <div class="form-group">
-                    <input type="text" name="phone" placeholder="Ваш телефон">
+                    <input type="text" name="phone" placeholder="Ваш телефон" class="form-control">
                 </div>
     
                 <div class="form-group">
-                    <button type="submit">Отправить заявку</button>
+                    <button type="submit" class="submit">Отправить заявку</button>
                 </div>
             </form>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+    
+            <div class="blocks">
+                <div class="block">
+                    <header class="block-header">Контакты</header>
+                    <div class="block-body">
+                        <p>
+                            <a href="tel:88632705837">8 (863) <strong>270-58-37</strong></a><br>
+                            <a href="tel:+79044408719">8 (904) <strong>440-87-19</a></strong>
+                        </p>
+    
+                        <p>Адрес: ул. Пушкина, д 10</p>
+    
+                        <p class="smaller text-right">Режим работы без перерывов и выходных с 8:00 до 20:00</p>
+                    </div>
+                </div>
+    
+                <div class="block">
+                    <header class="block-header">Мы на карте</header>
+                    <div class="block-body">
+                        <a href="maps.yandex.ru" target="_blank">
+                            <img src="images/map.png" alt="">
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="block block-blue">
+                    <header class="block-header">Запись на замер</header>
+                    <div class="block-body">
+                        <form action="form-handler.php" method="post" id="record-form-footer" class="record-form-footer form-footer">
+                            <input type="hidden" name="form_id" value="record-footer">
+    
+                            <div class="form-group">
+                                <input type="text" name="name" value="" class="form-control" placeholder="Ваше имя"/>
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" name="phone" value="" class="form-control" placeholder="Ваш телефон"/>
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" name="comment" placeholder="Комментарий" class="form-control">
+                            </div>
+    
+                            <div class="form-group">
+                                <button type="submit" class="submit">Записаться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="block">
+                    <header class="block-header">Задать вопрос</header>
+                    <div class="block-body">
+                        <form action="form-handler.php" method="post" id="question-form" class="question-form form-footer">
+                            <input type="hidden" name="form_id" value="question">
+    
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Ваше имя" class="form-control">
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" name="phone" placeholder="Ваш телефон" class="form-control">
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" name="comment" placeholder="Комментарий" class="form-control">
+                            </div>
+    
+                            <div class="form-group">
+                                <button type="submit" class="submit">Задать вопрос</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+        </div>
+    </footer>
+
+    <div id="modal" class="modal-bg">
+        <div class="modal">
+            <div class="modal-inner">
+                <div class="modal-close" title="Закрыть">x</div>
+    
+                <header class="modal-header">Длиный заголовок в несколько строк</header>
+    
+                <div class="modal-text">
+                    Выезд замерщика возможен через! Перезвоним - в ближайшие секунды! Засекайте! Выезд замерщика возможен через! Перезвоним - в ближайшие секунды! Засекайте! Выезд замерщика возможен через! Перезвоним - в ближайшие секунды! Засекайте!
+                </div>
+    
+                <form id="modal-form" action="form-handler.php" class="modal-form" method="post">
+                    <input type="hidden" name="form_id" value="form_modal">
+                    <input type="hidden" name="form_name" value="Вызов замерщика">
+    
+                    <div class="form-group">
+                        <input type="text" name="name" value="" placeholder="Ваше имя" class="form-control">
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="text" name="phone" value="" placeholder="Ваш телефон" class="form-control">
+                    </div>
+    
+                    <div class="form-group">
+                        <button type="submit" class="submit">Отправить форму</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 

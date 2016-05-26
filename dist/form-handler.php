@@ -21,8 +21,9 @@ $mailTo = 'to@mail.com';
  * Field names
  */
 $fieldNames = [
-    'name' => 'Ваше имя',
+    'name'  => 'Ваше имя',
     'phone' => 'Ваш телефон',
+    'comment' => 'Комментарий',
 ];
 
 /**
@@ -42,12 +43,71 @@ $causeGagerForm
     ->setFieldNames($fieldNames)
     ->setMessageBodyTemplate('./emails/cause_gager', compact('siteName'));
 
+/**
+ * Форма записи
+ */
+$mailer->setSubject($siteName . ': Запись с сайта');
+$recordForm = new Form('record', $post, $mailer);
+$recordForm
+    ->addField('name', ['required', 'lengthMax:50'])
+    ->addField('phone', ['required', 'lengthMax:50'])
+    ->setFieldNames($fieldNames)
+    ->setMessageBodyTemplate('./emails/record', compact('siteName'));
+
+/**
+ * Запись на замер в футере
+ */
+$mailer->setSubject($siteName . ': Запись на замер с сайта');
+$recordFooterForm = new Form('record-footer', $post, $mailer);
+$recordFooterForm
+    ->addField('name', ['required', 'lengthMax:50'])
+    ->addField('phone', ['required', 'lengthMax:50'])
+    ->addField('comment', ['required', 'lengthMax:500'])
+    ->setFieldNames($fieldNames)
+    ->setMessageBodyTemplate('./emails/record_footer', compact('siteName'));
+
+/**
+ * Задать вопрос в футере
+ */
+$mailer->setSubject($siteName . ': Вопрос от пользователя с сайта');
+$questionForm = new Form('question', $post, $mailer);
+$questionForm
+    ->addField('name', ['required', 'lengthMax:50'])
+    ->addField('phone', ['required', 'lengthMax:50'])
+    ->addField('comment', ['required', 'lengthMax:500'])
+    ->setFieldNames($fieldNames)
+    ->setMessageBodyTemplate('./emails/question', compact('siteName'));
+
+/**
+ * Обработчик для всплывающей формы
+ */
+$formName = isset($post['form_name']) ? $post['form_name'] : 'Всплывающая форма';
+$mailer->setSubject($siteName . ': ' . $formName);
+$formModal = new Form('form_modal', $post, $mailer);
+$formModal
+    ->addField('name', ['required', 'lengthMax:50'])
+    ->addField('phone', ['required', 'lengthMax:50'])
+    ->setFieldNames($fieldNames)
+    ->setMessageBodyTemplate('./emails/modal', compact('siteName', 'formName'));
 
 /**
  * Form handlers
  */
 $formHandler = new FormHandler();
 $formHandler->addForm($causeGagerForm);
+$formHandler->addForm($recordForm);
+$formHandler->addForm($recordFooterForm);
+$formHandler->addForm($questionForm);
+$formHandler->addForm($formModal);
 
 // Handle form!
-$formHandler->handle($formId);
+try {
+
+    $formHandler->handle($formId);
+
+} catch (Exception $exception) {
+
+    $response = new \DigitalHammer\LpForms\ResponseJson();
+
+    echo $response->fail($exception->getMessage());
+}

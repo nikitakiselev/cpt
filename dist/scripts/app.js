@@ -34,24 +34,97 @@
     livingRoomCounter.setTime(60 * 60 * 24 * 20);
 
     // start timers
-    //kitchenCounter.start();
-    //bedRoomCounter.start();
-    //livingRoomCounter.start();
+    kitchenCounter.start();
+    bedRoomCounter.start();
+    livingRoomCounter.start();
 
 
     /**
      * Ajax forms
      */
+    var submitedSuccessHandler = function(data) {
+        if (data.status === 'success') {
+            this.reset();
+            return swal("Выполнено!", data.message, "success");
+        }
+
+        return swal("Ошибка", data.message, "error");
+    };
+
     var causeGagerForm = new AjaxForm('#cause-gager-form', {
         autoHelpBlock: true
     });
 
-    causeGagerForm.onSubmited = function(data) {
-        if (data.status === 'success') {
-            swal("Выполнено!", data.message, "success");
-        } else {
-            swal("Ошибка", data.message, "error");
-        }
+    var recordForm = new AjaxForm('#record-form', {
+        autoHelpBlock: true
+    });
+
+    var customPopulationErrorHandler = function(ajaxForm, errorsJson) {
+        $.each(errorsJson, function(field, errors)
+        {
+            var $formGroup = ajaxForm.$form.find('[name=' + field + ']').closest(ajaxForm.config.controlWrapper),
+                $helpBlock = $formGroup.find(ajaxForm.config.controlErrorBlock);
+
+            if ( ! $formGroup.length)
+            {
+                return;
+            }
+
+            if ( ! $helpBlock.length && ajaxForm.config.autoHelpBlock)
+            {
+                $helpBlock = $('<div class="' + ajaxForm.config.controlErrorBlock.replace('.', '') + '"></div>');
+                $formGroup.append($helpBlock);
+            }
+
+            $formGroup.addClass(ajaxForm.config.controlErrorClass);
+
+            $helpBlock.attr('title', errors.shift());
+        });
     };
+
+    var recordFormFooter = new AjaxForm('#record-form-footer', {
+        autoHelpBlock: true,
+    });
+
+    var questionForm = new AjaxForm('#question-form', {
+        autoHelpBlock: true
+    });
+
+    var modalForm = new AjaxForm('#modal-form', {
+        autoHelpBlock: true
+    });
+
+    // custom population handlers
+    recordFormFooter.populateErrors = customPopulationErrorHandler;
+    questionForm.populateErrors = customPopulationErrorHandler;
+
+    // form submit handlers
+    causeGagerForm.onSubmited = submitedSuccessHandler;
+    recordForm.onSubmited = submitedSuccessHandler;
+    recordFormFooter.onSubmited = submitedSuccessHandler;
+    questionForm.onSubmited = submitedSuccessHandler;
+    modalForm.onSubmited = submitedSuccessHandler;
+
+
+    $('body').on('click', 'a[data-modal]', function(event) {
+        var $this = $(this),
+            title = $this.data('title'),
+            content = $this.data('content'),
+            formName = $this.data('form-name');
+
+        var $modal = $('#modal');
+
+        $modal.addClass('show');
+        title ? $modal.find('.modal-header').html(title) : null;
+        content ? $modal.find('.modal-text').html(content) : null;
+        formName ? $modal.find('[name="form_name"]').val(formName) : null;
+
+        event.preventDefault();
+    });
+
+    $('#modal').on('click', '.modal-close', function(event) {
+        $('#modal').removeClass('show');
+        event.preventDefault();
+    });
 
 })(jQuery);

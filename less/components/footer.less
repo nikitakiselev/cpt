@@ -1,0 +1,114 @@
+.page-footer {
+
+    padding-top: 55px;
+    padding-bottom: 52px;
+
+    .blocks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .block {
+        width: 225px;
+    }
+
+    .block-blue {
+        .block-header {
+            color: #1567b0;
+        }
+    }
+
+    .block-header {
+        font-size: 24px;
+        color: #e03938;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 23px;
+        text-align: center;
+    }
+
+    .block-body {
+        font-size: 18px;
+        text-align: center;
+
+        p {
+            margin-bottom: 15px;
+
+            &.smaller {
+                font-weight: 300;
+                font-size: 14px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.form-footer {
+
+    .help-block {
+        cursor: help;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        background: url(../images/error.svg) no-repeat;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+    }
+
+    .form-control {
+        border: 2px solid #e03938;
+        padding: 6px 0;
+        border-radius: 20px;
+        .placeholder({
+            color: #e03938
+        });
+        position: relative;
+    }
+
+    .form-group.has-error {
+        position: relative;
+
+        .form-control {
+            box-shadow: none;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 7px;
+    }
+
+    .submit {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: capitalize;
+        width: 100%;
+        padding: 10px 30px;
+        border-radius: 24px;
+        border: none;
+    }
+}
+
+.block-blue {
+    .form-footer {
+        .form-control {
+            border: 2px solid #1567b0;
+            .placeholder({
+                color: #1567b0;
+            })
+        }
+    }
+
+    .submit {
+        background: #1567b0;
+    }
+}
