@@ -87,6 +87,8 @@ $formModal = new Form('form_modal', $post, $mailer);
 $formModal
     ->addField('name', ['required', 'lengthMax:50'])
     ->addField('phone', ['required', 'lengthMax:50'])
+    ->addField('title', [])
+    ->addField('content', [])
     ->setFieldNames($fieldNames)
     ->setMessageBodyTemplate('./emails/modal', compact('siteName', 'formName'));
 

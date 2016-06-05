@@ -115,8 +115,17 @@
         var $modal = $('#modal');
 
         $modal.addClass('show');
-        title ? $modal.find('.modal-header').html(title) : null;
-        content ? $modal.find('.modal-text').html(content) : null;
+
+        if (title) {
+            $modal.find('.modal-header').html(title);
+            $modal.find('[name="title"]').val(title);
+        }
+
+        if (content) {
+            $modal.find('.modal-text').html(content);
+            $modal.find('[name="content"]').val(content);
+        }
+
         formName ? $modal.find('[name="form_name"]').val(formName) : null;
 
         event.preventDefault();
