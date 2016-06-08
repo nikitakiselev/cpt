@@ -29,9 +29,15 @@
         autoStart: false
     });
 
-    kitchenCounter.setTime(60 * 60 * 24 * 20); // 20 days
-    bedRoomCounter.setTime(60 * 60 * 24 * 20);
-    livingRoomCounter.setTime(60 * 60 * 24 * 20);
+    var now = new Date();
+
+    // year, month, day, hours, minutes, seconds
+    var kitchenCounterEndTime = new Date(2016, 5, 10, 23, 59, 59); // 10 июня 2016 23:59:59
+    var kitchenDiff = Math.round((kitchenCounterEndTime - now) / 1000);
+
+    kitchenCounter.setTime(kitchenDiff);
+    bedRoomCounter.setTime(kitchenDiff);
+    livingRoomCounter.setTime(kitchenDiff);
 
     // start timers
     kitchenCounter.start();
